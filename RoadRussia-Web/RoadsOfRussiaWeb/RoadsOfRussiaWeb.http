@@ -1,0 +1,6 @@
+@RoadsOfRussiaWeb_HostAddress = http://localhost:5233
+
+GET {{RoadsOfRussiaWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

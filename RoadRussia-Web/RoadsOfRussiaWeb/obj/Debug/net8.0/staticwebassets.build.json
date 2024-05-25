@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "OfAXPsrhlgGQhB+qm5b8O4yZYG2++V+m58tfCot1obA=",
+  "Source": "RoadsOfRussiaWeb",
+  "BasePath": "_content/RoadsOfRussiaWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RoadsOfRussiaWeb\\wwwroot",
+      "Source": "RoadsOfRussiaWeb",
+      "ContentRoot": "C:\\Users\\ServerPC\\Desktop\\RoadRussia-Web\\RoadsOfRussiaWeb\\wwwroot\\",
+      "BasePath": "_content/RoadsOfRussiaWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

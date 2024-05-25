@@ -1,0 +1,25 @@
+﻿<Page x:Class="RoadsOfRussia.Views.Pages.EmployeeEventsCalendarPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RoadsOfRussia.Views.Pages"
+      mc:Ignorable="d"
+      Title="EmployeeEventsCalendarPage" Width="800" Height="300">
+
+    <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="399*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGreen">
+            <TreeView Name="TreeView" Background="LightGreen" Width="376" Height="247"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGreen">
+            <Calendar x:Name="calendarEmployee" SelectedDatesChanged="MyCalendar_SelectedDatesChanged" Background="LightGreen" Width="376" Height="247"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

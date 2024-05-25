@@ -1,0 +1,25 @@
+﻿<Window x:Class="RoadsOfRussia.Views.Windows.TrainingCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoadsOfRussia.Views.Windows"
+        mc:Ignorable="d"
+        FontFamily="Cascadia code"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Background="LightGreen"
+        Title="Карточка мероприятия" Height="350" Width="390">
+    
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="300" Width="390">
+            <Label Content="Карточка мероприятия" HorizontalAlignment="Center" Background="Green" FontWeight="Bold" Margin="0, 0, 0, 20"/>
+            <TextBlock x:Name="txbNameEvent" Text="Название мероприятия: " Margin="10"/>
+            <TextBlock x:Name="txbTypeEvent" Text="Тип мероприятия: " Margin="10"/>
+            <TextBlock x:Name="txbStatusEvent" Text="Статус мероприятия: " Margin="10"/>
+            <TextBlock Name="txbDateStartEvent" Text="Дата начала мероприятия: " Margin="10"/>
+            <TextBlock Name="txbDescEvent" Text="Описание мероприятия: " Margin="10" Height="63" TextWrapping="Wrap"/>
+            <Button x:Name="btnSubscribeDateOfBirth" Content="Подписаться на событие: День Рождения" HorizontalAlignment="Center" Background="Green" Visibility="Collapsed" Click="btnSubscribeDateOfBirth_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

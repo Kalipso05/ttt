@@ -1,0 +1,33 @@
+﻿<Window x:Class="RoadsOfRussia.Views.Windows.EmployeeCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoadsOfRussia.Views.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Карточка сотрудника" Height="550" Width="394">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="394" Height="550" Background="LightGreen">
+            <Label Content="Карточка сотрудника" HorizontalAlignment="Center" Background="Green" FontFamily="Segoe UI Black" FontSize="14" Margin="0, 10, 0, 0"/>
+            <Image x:Name="imagePhoto" Width="90" Height="61" Margin="0 ,10 ,0 ,0" Source="C:\Users\ServerPC\Downloads\dng_img_3206.jpg"/>
+            <Label x:Name="fullName" Content="ФИО: Мурад Мурад Мурад" HorizontalAlignment="Center"/>
+            <Label x:Name="structuralDivision" Content="Структурное подразделение: Подразделение" HorizontalAlignment="Center"/>
+            <Label x:Name="jobTitle" Content="Должность: Уборшик" HorizontalAlignment="Center"/>
+            <Label x:Name="director" Content="Непосредственный руководитель: ктото" HorizontalAlignment="Center"/>
+            <Label x:Name="asisstantDirector" Content="Помощник: кто-то" HorizontalAlignment="Center"/>
+            <Label x:Name="workPhone" Content="Рабочий телефон: " HorizontalAlignment="Center" Background="LightGreen"/>
+            <Label x:Name="cabinet" Content="Кабинет: №123" HorizontalAlignment="Center"/>
+            <Label Content="Прочая информация:" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="otherInformation" Height="50" Background="White" Width="324" TextWrapping="Wrap"/>
+            <Label Content="Мобильный телефон" HorizontalAlignment="Center"/>
+            <TextBox x:Name="txbPhone" HorizontalAlignment="Center" Width="150" IsEnabled="False"/>
+            <Label Content="Дата рождения" HorizontalAlignment="Center"/>
+            <DatePicker x:Name="dpDateOfBirth" HorizontalAlignment="Center" IsEnabled="False"/>
+            <Button x:Name="btnEditEmployee" Content="Редактировать" Background="Green" Width="160" Height="25" Margin="0, 10, 0, 0" Click="EditEmployee_Click"/>
+            <Button x:Name="btnSaveEmployee" Content="Сохранить" Background="Green" Width="160" Height="25" Margin="0, 10, 0, 0" Click="SaveEmployee_Click" Visibility="Collapsed"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

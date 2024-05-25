@@ -1,0 +1,72 @@
+﻿<Window x:Class="RoadsOfRussia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoadsOfRussia"
+        mc:Ignorable="d"
+        MinHeight="600"
+        MinWidth="1080"
+        Title="MainWindow" Height="650" Width="1080">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="216*"/>
+            <ColumnDefinition Width="97*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="195*"/>
+            <RowDefinition Height="340*"/>
+        </Grid.RowDefinitions>
+
+        <!--E8CCLLn9rhTWc34h4MhA-->
+        <!--Верхняя часть-->
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" Background="LightGreen">
+            <Ellipse Fill="Green" Width="40" Height="40"/>
+            <Label Background="White" Width="651" Height="25" Margin="100, 0, 0, 0"/>
+            <Label Content="ФИО" Height="25" Margin="50, 0, 0, 0"/>
+            <Ellipse Fill="Green" Width="40" Height="40" Margin="70, 0, 0, 0"/>
+        </StackPanel>
+
+        <!--Левое меню-->
+        <StackPanel Grid.Row="1" Margin="0,25,0,0" Grid.RowSpan="2" Background="LightGreen">
+            <Button x:Name="pageEmployee" Content="Сотрудники" Background="Green" Margin="0, 10, 0, 0" Click="pageEmployee_Click"/>
+            <Button x:Name="pageCalendarEmployee" Background="Green" Margin="0, 10, 0, 0">
+                <TextBlock TextAlignment="Center">Календарь событий <LineBreak/> сотрудника</TextBlock>
+            </Button>
+            <Button Content="Календарь обучений" Background="Green" Margin="0, 10, 0, 0" Click="CalendarTraining_Click"/>
+            <Button Content="Подбор резюме" Background="Green" Margin="0, 10, 0, 0" Click="ResumeSelection_Click"/>
+            <Button Background="Green" Margin="0, 10, 0, 0" Click="AbsenceSelection_Click">
+                <TextBlock TextAlignment="Center">Список отсутсвующих <LineBreak/>работников</TextBlock>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="25,25,25,25" Orientation="Horizontal" Background="LightGreen" >
+            <Canvas>
+                <TextBlock Text="Оповещение 1" Background="Green" Height="25" Width="95" Canvas.Left="146" Canvas.Top="12"/>
+                <TextBlock Text="Оповещение 1" Background="Green" Height="26" Width="95" Canvas.Left="21" Canvas.Top="12"/>
+                <TextBlock Text="Оповещение 1" Background="Green" Height="25" Width="95" HorizontalAlignment="Left" Canvas.Left="275" VerticalAlignment="Top" Canvas.Top="12"/>
+            </Canvas>
+        </StackPanel>
+
+        <!--Центр-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="25,25,25,25" Orientation="Horizontal" Background="LightGreen" >
+            <Canvas>
+                <TextBlock Text="Оповещение 1" Background="Green" Height="25" Width="95" Canvas.Left="260" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Оповещение 2" Background="Green" Height="26" Width="95" Canvas.Left="76" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Оповещение 3" Background="Green" Height="25" Width="95" Canvas.Left="447" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <TextBlock Text="Событие 1" Background="Green" Height="25" Width="95" Canvas.Left="260" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="Событие 2" Background="Green" Height="26" Width="95" Canvas.Left="76" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Событие 3" Background="Green" Height="25" Width="95" Canvas.Left="447" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Canvas>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="25, 25, 25, 25" Height="300" Width="800">
+
+            <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
+    </Grid>
+</Window>

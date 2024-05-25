@@ -1,0 +1,49 @@
+﻿<Page x:Class="RoadsOfRussia.Views.Pages.EmployeeDirectory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RoadsOfRussia.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="800"
+      
+      Title="EmployeeDirectory">
+
+    <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="399*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TreeView Name="TreeView" Background="LightGreen" Width="372" Height="276"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <DataGrid x:Name="dataGridEmployee" Background="LightGreen" Foreground="Black" AutoGenerateColumns="False" IsReadOnly="True" Height="273">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding MiddleName}"/>
+                    <DataGridTextColumn Header="Структурное подразделение" Binding="{Binding StructuralDivision}"/>
+                    <DataGridTextColumn Header="Должность" Binding="{Binding JobTitle}"/>
+                    <DataGridTextColumn Header="Рабочий телефон" Binding="{Binding WorkPhone}"/>
+                    <DataGridTextColumn Header="Почта" Binding="{Binding Email}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="openCardButton" Content="Открыть карточку" Click="OpenCardEmployee_Click" Visibility="Hidden"/>
+                                <DataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=DataGridRow}}" Value="True">
+                                        <Setter TargetName="openCardButton" Property="Visibility" Value="Visible" />
+                                    </DataTrigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+    </Grid>
+</Page>
