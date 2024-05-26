@@ -20,6 +20,8 @@ namespace RoadsOfRussia.ViewModel
 
         public string StructuralDivision { get; set; }
         public int IdStructuralDivision { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
 
         public string JobTitle { get; set; }
         public int IdJobTitle { get; set; }

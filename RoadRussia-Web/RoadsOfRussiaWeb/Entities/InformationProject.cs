@@ -17,5 +17,9 @@ public partial class InformationProject
 
     public int DeviationOfDeadline { get; set; }
 
+    public int IdDevelopmentStage { get; set; }
+
+    public virtual DevelopmentStage IdDevelopmentStageNavigation { get; set; } = null!;
+
     public virtual Employee IdDirectorProjectNavigation { get; set; } = null!;
 }

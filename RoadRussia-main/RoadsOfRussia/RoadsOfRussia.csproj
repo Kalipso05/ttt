@@ -46,6 +46,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,17 +72,25 @@
     <Compile Include="ViewModel\EventModel.cs" />
     <Compile Include="ViewModel\JobTitleModel.cs" />
     <Compile Include="ViewModel\NotifyViewModel.cs" />
+    <Compile Include="ViewModel\ProjectModel.cs" />
+    <Compile Include="ViewModel\Test.cs" />
     <Compile Include="Views\Pages\EmployeeDirectory.xaml.cs">
       <DependentUpon>EmployeeDirectory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\EmployeeEventsCalendarPage.xaml.cs">
       <DependentUpon>EmployeeEventsCalendarPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\ProjectManagmentPage.xaml.cs">
+      <DependentUpon>ProjectManagmentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\ResumeSelectionPage.xaml.cs">
       <DependentUpon>ResumeSelectionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\TemporaryAbsencePage.xaml.cs">
       <DependentUpon>TemporaryAbsencePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\AuthorizationWindow.xaml.cs">
+      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Windows\EmployeeCardWindow.xaml.cs">
       <DependentUpon>EmployeeCardWindow.xaml</DependentUpon>
@@ -109,11 +118,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Pages\ProjectManagmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\ResumeSelectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\TemporaryAbsencePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Async="true" Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebApplication3.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="source/styles/style/modylestyle.css" />
+    <link rel="stylesheet" href="source/styles/style/modylestyles.css" />
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -43,27 +43,21 @@
         <div class="footer-bar">
             <div class="calendar">
 
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
-                        <asp:ListBox ID="ListBox1" runat="server" Width="500"></asp:ListBox>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                <asp:ListBox ID="ListBox1" runat="server" Width="500" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged" AutoPostBack="True"></asp:ListBox>
+            </div>
 
+            <div style="display: block">
+                <asp:FileUpload ID="FileUpload1" runat="server" CssClass="fileSelect" />
+                <asp:Button ID="ButtonUpload" runat="server" Text="Отправить" OnClick="ButtonUpload_Click" CssClass="fileUpload"/>
+                <asp:Button ID="ButtonSave" runat="server" Text="Скачать" OnClick="ButtonSave_Click" CssClass="fileUpload" Visible="false"/>
             </div>
 
         </div>
 
         <div class="test">
-            <asp:UpdatePanel runat="server">
-                <ContentTemplate>
-                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" OnLoad="DropDownList1_Load" AutoPostBack="true">
-                    </asp:DropDownList>
-                </ContentTemplate>
-            </asp:UpdatePanel>
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" OnLoad="DropDownList1_Load" AutoPostBack="True">
+            </asp:DropDownList>
             <div>
-
-                <asp:FileUpload ID="FileUpload1" runat="server" />
-                <asp:Button ID="ButtonUpload" runat="server" Text="UpLoad" OnClick="ButtonUpload_Click"/>
             </div>
 
         </div>

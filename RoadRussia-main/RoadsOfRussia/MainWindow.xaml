@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoadsOfRussia"
         mc:Ignorable="d"
-        MinHeight="600"
+        MinHeight="650"
         MinWidth="1080"
         Title="MainWindow" Height="650" Width="1080">
     <Grid>
@@ -20,11 +20,27 @@
             <RowDefinition Height="340*"/>
         </Grid.RowDefinitions>
 
+
+        <Grid Grid.Row="1"  Grid.Column="2">
+            <ListView Name="ListDataView" Margin="0,28,0,26">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <StackPanel Margin="0,20,0,0" Background="LightGreen">
+                                <Label Content="{Binding Title}"></Label>
+                                <Label Content="{Binding PublishDate}"></Label>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
         <!--E8CCLLn9rhTWc34h4MhA-->
         <!--Верхняя часть-->
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" Background="LightGreen">
             <Ellipse Fill="Green" Width="40" Height="40"/>
-            <Label Background="White" Width="651" Height="25" Margin="100, 0, 0, 0"/>
+            <TextBlock x:Name="txbNameModule" TextAlignment="Center" Background="White" Width="651" Height="25" Margin="100, 0, 0, 0"/>
             <Label Content="ФИО" Height="25" Margin="50, 0, 0, 0"/>
             <Ellipse Fill="Green" Width="40" Height="40" Margin="70, 0, 0, 0"/>
         </StackPanel>
@@ -40,6 +56,7 @@
             <Button Background="Green" Margin="0, 10, 0, 0" Click="AbsenceSelection_Click">
                 <TextBlock TextAlignment="Center">Список отсутсвующих <LineBreak/>работников</TextBlock>
             </Button>
+            <Button Content="Управление проектами" Background="Green" Margin="0, 10, 0, 0" Click="ProjectManagment_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="25,25,25,25" Orientation="Horizontal" Background="LightGreen" >
@@ -51,17 +68,31 @@
         </StackPanel>
 
         <!--Центр-->
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="25,25,25,25" Orientation="Horizontal" Background="LightGreen" >
-            <Canvas>
-                <TextBlock Text="Оповещение 1" Background="Green" Height="25" Width="95" Canvas.Left="260" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Оповещение 2" Background="Green" Height="26" Width="95" Canvas.Left="76" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Оповещение 3" Background="Green" Height="25" Width="95" Canvas.Left="447" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="25" Background="LightGreen">
+            <ScrollViewer Width="180" Height="50" Margin="10,10,388,102">
+                <TextBlock Text="Оповещение 1" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
 
-                <TextBlock Text="Событие 1" Background="Green" Height="25" Width="95" Canvas.Left="260" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <TextBlock Text="Событие 2" Background="Green" Height="26" Width="95" Canvas.Left="76" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBlock Text="Событие 3" Background="Green" Height="25" Width="95" Canvas.Left="447" Canvas.Top="85" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            </Canvas>
-        </StackPanel>
+            <ScrollViewer Width="180" Height="50" Margin="209,10,209,102">
+                <TextBlock Text="Оповещение 2" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
+
+            <ScrollViewer Width="180" Height="50" Margin="408,10,10,102">
+                <TextBlock Text="Оповещение 3" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
+
+            <ScrollViewer Width="180" Height="50" Margin="20,102,398,10">
+                <TextBlock x:Name="txbEvent1" Text="Событие 1" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
+
+            <ScrollViewer Width="180" Height="50" Margin="209,102,209,10" VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="txbEvent2" Text="Событие 2" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
+
+            <ScrollViewer Width="180" Height="50" Margin="408,102,10,10">
+                <TextBlock x:Name="txbEvent3" Text="Событие 3" TextWrapping="Wrap" Background="Green" Height="267" Width="200" />
+            </ScrollViewer>
+        </Grid>
 
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="25, 25, 25, 25" Height="300" Width="800">
 

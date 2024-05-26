@@ -13,6 +13,8 @@ namespace RoadsOfRussiaWeb.Models
         public string Surname { get; set; } = null!;
 
         public string? MiddleName { get; set; }
+        public string? Login { get; set; }
+        public string? Password { get; set; }
 
         public string StructuralDivision { get; set; }
         public int IdStructuralDivision {  get; set; }
@@ -53,6 +55,8 @@ namespace RoadsOfRussiaWeb.Models
             AsssistantDirector = employee.AsssistantDirector;
             OtherInformation = employee.OtherInformation;
             DateOfBirth = employee.DateOfBirth;
+            Login = employee.Login;
+            Password = employee.Password;
             
         }
     }

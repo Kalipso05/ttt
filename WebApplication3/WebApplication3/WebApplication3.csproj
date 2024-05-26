@@ -186,7 +186,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="source\styles\images\logo.png" />
-    <Content Include="source\styles\style\modylestyle.css" />
+    <Content Include="source\styles\style\modylestyles.css" />
     <Content Include="source\styles\style\styles.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

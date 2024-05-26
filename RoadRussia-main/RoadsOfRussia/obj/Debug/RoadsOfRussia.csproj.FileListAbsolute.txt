@@ -89,3 +89,7 @@ C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\RoadsOfRussia.
 C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\RoadsOfRussia.pdb
 C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Windows\TrainingCardWindow.g.cs
 C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Windows\TrainingCardWindow.baml
+C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Pages\ProjectManagmentPage.g.cs
+C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Pages\ProjectManagmentPage.baml
+C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Windows\AuthorizationWindow.g.cs
+C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\Views\Windows\AuthorizationWindow.baml

@@ -116,7 +116,7 @@
 
 
 .calendar {
-    display: inline-flex;
+    display: math;
     text-align: center;
     padding: 61px;
     position: relative;
@@ -168,4 +168,16 @@
 
 .test>select {
     margin-top: 10px;
+}
+
+.fileSelect {
+    position: relative;
+    top: 139px;
+    left: 318px;
+}
+
+.fileUpload {
+    position: relative;
+    left: 254px;
+    bottom: -175px;
 }

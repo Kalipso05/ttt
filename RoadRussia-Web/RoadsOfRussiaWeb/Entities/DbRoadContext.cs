@@ -17,11 +17,15 @@ public partial class DbRoadContext : DbContext
 
     public virtual DbSet<Candidate> Candidates { get; set; }
 
+    public virtual DbSet<DevelopmentStage> DevelopmentStages { get; set; }
+
     public virtual DbSet<DocumentSection> DocumentSections { get; set; }
 
     public virtual DbSet<Employee> Employees { get; set; }
 
     public virtual DbSet<Event> Events { get; set; }
+
+    public virtual DbSet<FilesDetail> FilesDetails { get; set; }
 
     public virtual DbSet<InformationProject> InformationProjects { get; set; }
 
@@ -45,7 +49,7 @@ public partial class DbRoadContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=localhost;Database=dbRoad;TrustServerCertificate=true;Trusted_Connection=true");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-6O2IASG;Database=dbRoad;TrustServerCertificate=true;Trusted_Connection=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -57,6 +61,15 @@ public partial class DbRoadContext : DbContext
             entity.Property(e => e.MiddleName).HasMaxLength(50);
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Surname).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<DevelopmentStage>(entity =>
+        {
+            entity.ToTable("DevelopmentStage");
+
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Description).HasMaxLength(255);
+            entity.Property(e => e.Name).HasMaxLength(50);
         });
 
         modelBuilder.Entity<DocumentSection>(entity =>
@@ -127,12 +140,22 @@ public partial class DbRoadContext : DbContext
                 .HasConstraintName("FK_Event_TypeEvent");
         });
 
+        modelBuilder.Entity<FilesDetail>(entity =>
+        {
+            entity.Property(e => e.FileName).HasMaxLength(50);
+        });
+
         modelBuilder.Entity<InformationProject>(entity =>
         {
             entity.ToTable("InformationProject");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.NameProject).HasMaxLength(50);
+
+            entity.HasOne(d => d.IdDevelopmentStageNavigation).WithMany(p => p.InformationProjects)
+                .HasForeignKey(d => d.IdDevelopmentStage)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_InformationProject_DevelopmentStage");
 
             entity.HasOne(d => d.IdDirectorProjectNavigation).WithMany(p => p.InformationProjects)
                 .HasForeignKey(d => d.IdDirectorProject)
