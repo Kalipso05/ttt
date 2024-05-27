@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VHtZ+OkF/yYUO3sdGlxP3kVWABbXP8K7icPd1A79m8Gvq+BjeaBbs1V51pznJ0RsU2ysYYaxzvSuXWE/jQn7GQ==",
+  "dgSpecHash": "DxxfgKt7wECNFhKphK0SDjXRLQtRGiDg7bUfVqdm1aEQMFK5/wolRGrCOsO4ktk0FZn6Qt+5gPN9rrNkF5pN+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ServerPC\\Desktop\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
+  "projectFilePath": "C:\\Users\\ServerPC\\Desktop\\RoadRussian\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ServerPC\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ServerPC\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

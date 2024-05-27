@@ -57,6 +57,10 @@ namespace RoadsOfRussia.Views.Windows
                         MessageBox.Show("Пользователь ненайден!");
                 }
             }
+            else
+            {
+                MessageBox.Show("Все поля должны быть заполнены");
+            }
         }
     }
 }

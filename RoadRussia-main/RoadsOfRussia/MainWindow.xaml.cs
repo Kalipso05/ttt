@@ -110,5 +110,15 @@ namespace RoadsOfRussia
             mainFrame.NavigationService.Navigate (new ProjectManagmentPage());
             txbNameModule.Text = "Управление проектами";
         }
+
+        private void PersonalAccount_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new PersonalAccountPage());
+        }
+
+        private void LegalActivity_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new LegalActivityPage());
+        }
     }
 }

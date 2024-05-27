@@ -4176,11 +4176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ServerPC\\Desktop\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
+      "projectUniqueName": "C:\\Users\\ServerPC\\Desktop\\RoadRussian\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
       "projectName": "RoadsOfRussiaWeb",
-      "projectPath": "C:\\Users\\ServerPC\\Desktop\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
+      "projectPath": "C:\\Users\\ServerPC\\Desktop\\RoadRussian\\RoadRussia-Web\\RoadsOfRussiaWeb\\RoadsOfRussiaWeb.csproj",
       "packagesPath": "C:\\Users\\ServerPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ServerPC\\Desktop\\RoadRussia-Web\\RoadsOfRussiaWeb\\obj\\",
+      "outputPath": "C:\\Users\\ServerPC\\Desktop\\RoadRussian\\RoadRussia-Web\\RoadsOfRussiaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

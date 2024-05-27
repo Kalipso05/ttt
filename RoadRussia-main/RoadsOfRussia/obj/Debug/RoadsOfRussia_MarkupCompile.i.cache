@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\obj\Debug\
+C:\Users\ServerPC\Desktop\RoadRussian\RoadRussia-main\RoadsOfRussia\obj\Debug\
 RoadsOfRussia
 none
 false
 DEBUG;TRACE
-C:\Users\ServerPC\Desktop\RoadRussia-main\RoadsOfRussia\App.xaml
-9870571561
+C:\Users\ServerPC\Desktop\RoadRussian\RoadRussia-main\RoadsOfRussia\App.xaml
+112018070686
 
-23-1344768810
-17-62817943
-MainWindow.xaml;Views\Pages\EmployeeDirectory.xaml;Views\Pages\EmployeeEventsCalendarPage.xaml;Views\Pages\ProjectManagmentPage.xaml;Views\Pages\ResumeSelectionPage.xaml;Views\Pages\TemporaryAbsencePage.xaml;Views\Windows\AuthorizationWindow.xaml;Views\Windows\EmployeeCardWindow.xaml;Views\Windows\TrainingCardWindow.xaml;
+26-1587513631
+221375407838
+MainWindow.xaml;Views\Pages\EmployeeDirectory.xaml;Views\Pages\EmployeeEventsCalendarPage.xaml;Views\Pages\LegalActivityPage.xaml;Views\Pages\PersonalAccountPage.xaml;Views\Pages\ProjectManagmentPage.xaml;Views\Pages\ResumeSelectionPage.xaml;Views\Pages\TemporaryAbsencePage.xaml;Views\Windows\AuthorizationWindow.xaml;Views\Windows\EmployeeCardWindow.xaml;Views\Windows\TrainingCardWindow.xaml;
 
 True
 
